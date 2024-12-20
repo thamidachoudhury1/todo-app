@@ -1,0 +1,142 @@
+/* Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background */
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  margin: 20px auto; /* Center container */
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs and Selects */
+input, select {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: block;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button.complete {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+button.edit {
+  background-color: #ffc107; /* Yellow */
+  color: black;
+}
+
+button.delete {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Task List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 10px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  input, select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%; /* Buttons stack vertically */
+    font-size: 14px;
+  }
+
+  li {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 10px;
+  }
+
+  h1, h2 {
+    font-size: 18px;
+  }
+
+  input, select {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  li {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
