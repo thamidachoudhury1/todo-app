@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - master # Trigger the workflow when pushing to 'master'
+      - master
 
 jobs:
   deploy:
@@ -15,12 +15,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Use an LTS version of Node.js
+          node-version: '16' # Use a stable LTS version
 
       - name: Install Dependencies
         run: npm install
 
-      - name: Build the Project
+      - name: Build Project
         run: npm run build
 
       - name: Deploy to GitHub Pages
